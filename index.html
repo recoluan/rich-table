@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #table-container {
+        width: 600px;
+        overflow-x: auto;
+      }
+      #table-container * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #table-container table {
+        border: 1px solid rgb(190, 190, 190);
+        border-spacing: 0;
+      }
+
+      #table-container table thead {
+        background-color: rgb(204, 201, 201);
+        font-weight: bold;
+      }
+
+      #table-container table td {
+        padding: 5px;
+        height: 40px;
+        outline: none;
+        border: 1px solid rgb(190, 190, 190);
+      }
+
+      #table-container .highlight {
+        background-color: rgba(97, 106, 229, 0.3);
+      }
+
+      #table-container .placeholder {
+        display: none;
+      }
+
+      #menu-wrapper {
+        position: absolute;
+        min-width: 100px;
+        list-style: none;
+        border: 1px solid rgb(190, 190, 190);
+        background-color: #fff;
+        padding: 0px;
+        font-size: 14px;
+      }
+      #menu-wrapper .menu-item {
+        padding: 4px;
+        border-bottom: 1px solid #999;
+      }
+      #menu-wrapper .menu-item:hover {
+        cursor: pointer;
+        background-color: rgb(204, 201, 201);
+      }
+
+      #menu-wrapper .menu-item input {
+        width: 30px;
+      }
+    </style>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div id="table-container"></div>
+
+    <script>
+      const richTable = new RichTable("#table-container", {
+        headers: ["aaa", "bbb", "ccc", "ddd"],
+        combineStyle: "row", // row, column, all
+        cellWidth: 200,
+      });
+    </script>
+  </body>
+</html>
